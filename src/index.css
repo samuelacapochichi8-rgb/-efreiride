@@ -92,3 +92,36 @@ body {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* ── Responsive Design (Mobile & Tablette) ──────────────── */
+@media (max-width: 768px) {
+  /* On ajuste la taille de base pour que tout ne soit pas énorme */
+  :root {
+    --radius-lg: 12px;
+  }
+
+  body {
+    font-size: 14px; /* Un peu plus petit sur mobile */
+    padding: 10px;   /* Ajoute une petite marge sur les côtés */
+  }
+
+  /* Si tu as des colonnes (flexbox), on les passe en vertical */
+  .container, .main-content, .grid-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    padding: 0 15px;
+  }
+
+  /* On s'assure que les images ne dépassent pas de l'écran */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Si tu as une barre de navigation, on peut la simplifier */
+  .navbar {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+}
